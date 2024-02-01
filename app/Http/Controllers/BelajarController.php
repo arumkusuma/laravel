@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class BelajarController extends Controller
 {
-  public function index(){
-    
+  public function index()
+  {
+    echo "Hello World";
   }
-
 }
