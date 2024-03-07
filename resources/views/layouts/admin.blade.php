@@ -37,6 +37,7 @@
 
                 <!-- Begin Page Content -->
                @yield('content')
+               @yield('tabel')
                 <!-- /.container-fluid -->
 
             </div>
