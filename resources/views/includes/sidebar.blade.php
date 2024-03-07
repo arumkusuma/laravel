@@ -26,7 +26,7 @@ id="accordionSidebar">
 <hr class="sidebar-divider my-0">
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-<a class="nav-link" href="/barang">
+<a class="nav-link" href="/menu">
 <i class="fas fa-fw fa-gift"></i>
 <span>Barang</span></a>
 </li>
