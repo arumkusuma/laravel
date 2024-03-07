@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BerhitungController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/ica', function () {
-    return view('ica');
+Route::get('/', function () {
+    return view('WELCOME');
 });
 
-Route::get('/hitung', [BerhitungController::class, 'Hitung']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
