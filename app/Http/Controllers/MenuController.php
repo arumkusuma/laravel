@@ -47,6 +47,32 @@ class MenuController extends Controller
         return view('pages.detailmenu', compact('menu'));
     }
 
+    public function edit($id){
+        $menu = DB::table('menu')->where('ID_Menu', $id)->first();
+        return view('pages.editmenu', compact('menu'));
+    }
+
+    public function update(Request $request, $id){
+        $request->validate([
+            'namaMenu' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+            'kategori' => 'required'
+        ]);
+
+        DB::table('menu')
+            ->where('ID_Menu', $id)
+            ->update([
+                'Nama_Menu' => $request->namaMenu,
+                'Harga' => $request->harga,
+                'Deskripsi' => $request->deskripsi,
+                'Kategori' => $request->kategori
+            ]);
+
+        Alert::success('Sukses', 'Data berhasil diupdate');
+        return redirect('/menu');
+    }
+
     public function destroy($id){
         $menu = DB::table('menu')->where('ID_Menu', $id)->delete();
         Alert::success('Success', 'Data berhasil dihapus');

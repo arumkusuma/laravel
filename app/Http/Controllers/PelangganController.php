@@ -28,7 +28,7 @@ class PelangganController extends Controller
             'namaPelanggan' => 'required',
             'noTelepon' => 'required',
             'alamat' => 'required',
-            'email' => 'required'
+            'email' => 'required|email'
         ]);
 
         DB::table('pelanggan')->insert([
@@ -46,6 +46,7 @@ class PelangganController extends Controller
         $pelanggan = DB::table('pelanggan')->where('ID_Pelanggan', $id)->first();
         return view('pages.detailpelanggan', compact('pelanggan'));
     }
+
     public function edit($id){
         $pelanggan = DB::table('pelanggan')->where('ID_Pelanggan', $id)->first();
         return view('pages.editpelanggan', compact('pelanggan'));
@@ -56,11 +57,11 @@ class PelangganController extends Controller
             'namaPelanggan' => 'required',
             'noTelepon' => 'required',
             'alamat' => 'required',
-            'email' => 'required'
+            'email' => 'required|email'
         ]);
 
-        $request = DB::table('pelanggan')
-            ->where('ID_Pelanggan', $id)->first()
+        DB::table('pelanggan')
+            ->where('ID_Pelanggan', $id)
             ->update([
                 'Nama_Pelanggan' => $request->namaPelanggan,
                 'Nomor_Telepon' => $request->noTelepon,
@@ -69,7 +70,7 @@ class PelangganController extends Controller
             ]);
 
         Alert::success('Sukses', 'Data berhasil diupdate');
-        return redirect('/dashboard');
+        return redirect('/pelanggan');
     }
 
     public function destroy($id){

@@ -9,8 +9,8 @@
             @method('PUT')
             <div class="form-group">
                 <label for="nama">Nama Pelanggan</label>
-                <input type="text" style="width: 72rem;" class="form-control" name="nama" value="{{$pelanggan->Nama_Pelanggan}}" id="nama" placeholder="Masukkan Nama Lengkap">
-                @error('nama')
+                <input type="text" style="width: 72rem;" class="form-control" name="namaPelanggan" value="{{$pelanggan->Nama_Pelanggan}}" id="nama" placeholder="Masukkan Nama Lengkap">
+                @error('namaPelanggan')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
@@ -18,8 +18,8 @@
             </div>
             <div class="form-group">
                 <label for="nohp">Nomor Telepon</label>
-                <input type="number" style="width: 72rem;" class="form-control" name="nohp" value="{{$pelanggan->Nomor_Telepon}}" id="nohp" placeholder="Masukkan no hp">
-                @error('nohp')
+                <input type="number" style="width: 72rem;" class="form-control" name="noTelepon" value="{{$pelanggan->Nomor_Telepon}}" id="nohp" placeholder="Masukkan no hp">
+                @error('noTelepon')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
@@ -36,8 +36,8 @@
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" style="width: 72rem;" class="form-control" name="alamat" value="{{$pelanggan->Email}}" id="alamat" placeholder="Masukkan Alamat">
-                @error('alamat')
+                <input type="text" style="width: 72rem;" class="form-control" name="email" value="{{$pelanggan->Email}}" id="email" placeholder="Masukkan Email">
+                @error('email')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
@@ -49,6 +49,4 @@
             </div>
         </form>
     </div>
-
-
 @endsection

@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('pelanggan', function (Blueprint $table) {
             $table->id('ID_Pelanggan');
-            $table->unsignedBigInteger('ID_Profil');
             $table->string('Nama_Pelanggan', 100);
+            $table->string('Nomor_Telepon', 15);
+            $table->string('Alamat', 100);
             $table->string('Email', 100);
             $table->timestamps();
-
-            $table->foreign('ID_Profil')->references('ID_Profil')->on('profil');
         });
     }
 

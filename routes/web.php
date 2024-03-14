@@ -31,4 +31,6 @@ Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'index']);
 Route::get('/tambahmenu', [\App\Http\Controllers\MenuController::class, 'tambahmenu']);
 Route::post('/menu', [\App\Http\Controllers\MenuController::class, 'menu']);
 Route::get('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'show']);
+Route::get('/menu/{ID_Menu}/edit', [\App\Http\Controllers\MenuController::class, 'edit']);
+Route::put('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'update']);
 Route::delete('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'destroy']);
