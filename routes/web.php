@@ -34,3 +34,5 @@ Route::get('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'sho
 Route::get('/menu/{ID_Menu}/edit', [\App\Http\Controllers\MenuController::class, 'edit']);
 Route::put('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'update']);
 Route::delete('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'destroy']);
+
+Route::resource('kategori', \App\Http\Controllers\KategoriController::class);

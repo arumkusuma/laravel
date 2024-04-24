@@ -35,6 +35,7 @@
         </div>
         <div class="p-3">
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/menu" class="btn btn-success my-3">Kembali</a>
         </div>
     </form>
 @endsection

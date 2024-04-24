@@ -27,7 +27,15 @@ id="accordionSidebar">
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
 <a class="nav-link" href="/menu">
-<i class="fas fa-fw fa-utensils"></i>
+<i class="fas fa-fw fa-hamburger"></i>
 <span>Menu</span></a>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider my-0">
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
+<a class="nav-link" href="/kategori">
+<i class="fas fa-fw fa-utensils"></i>
+<span>Kategori</span></a>
 </li>
 </ul>
