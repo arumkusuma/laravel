@@ -38,4 +38,18 @@ id="accordionSidebar">
 <i class="fas fa-fw fa-utensils"></i>
 <span>Kategori</span></a>
 </li>
+<hr class="sidebar-divider my-0">
+<li class="nav-item active">
+    <div class="nav-item active" aria-labelledby="navbarDropdown">
+        <a class="nav-link" href="{{ route('logout') }}"
+           onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+    
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+    </div>
+</li>
 </ul>

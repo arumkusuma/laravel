@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
  Route::get('/', function () {
-     return view('pages.dashboard');
+     return view('landing');
  });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
@@ -36,3 +38,8 @@ Route::put('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'upd
 Route::delete('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'destroy']);
 
 Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
