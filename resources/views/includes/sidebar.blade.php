@@ -16,6 +16,8 @@ id="accordionSidebar">
 <span>Dashboard</span></a>
 </li>
 <!-- Divider -->
+
+@if($showmenuAdmin)
 <hr class="sidebar-divider">
 <li class="nav-item active">
 <a class="nav-link" href="/pelanggan">
@@ -37,6 +39,8 @@ id="accordionSidebar">
 <a class="nav-link" href="/kategori">
 <i class="fas fa-fw fa-utensils"></i>
 <span>Kategori</span></a>
+@endif
+
 </li>
 <hr class="sidebar-divider my-0">
 <li class="nav-item active">

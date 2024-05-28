@@ -21,7 +21,9 @@ use Illuminate\Support\Facades\Route;
      return view('landing');
  });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/pelanggan', [PelangganController::class, 'index']);
 Route::get('/tambahpelanggan', [PelangganController::class, 'tambahpelanggan']);
 Route::post('/pelanggan', [PelangganController::class, 'pelanggan']);
@@ -29,15 +31,20 @@ Route::get('/pelanggan/{ID_Pelanggan}', [PelangganController::class, 'show']);
 Route::get('/pelanggan/{ID_Pelanggan}/edit', [PelangganController::class, 'edit']);
 Route::put('/pelanggan/{ID_Pelanggan}', [PelangganController::class, 'update']);
 Route::delete('/pelanggan/{ID_Pelanggan}', [PelangganController::class, 'destroy']);
-Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'index']);
-Route::get('/tambahmenu', [\App\Http\Controllers\MenuController::class, 'tambahmenu']);
-Route::post('/menu', [\App\Http\Controllers\MenuController::class, 'menu']);
-Route::get('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'show']);
-Route::get('/menu/{ID_Menu}/edit', [\App\Http\Controllers\MenuController::class, 'edit']);
-Route::put('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'update']);
-Route::delete('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'destroy']);
+});
+Route::middleware('auth', 'admin')->group(function () {
+    
+    Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'index']);
+    Route::get('/tambahmenu', [\App\Http\Controllers\MenuController::class, 'tambahmenu']);
+    Route::post('/menu', [\App\Http\Controllers\MenuController::class, 'menu']);
+    Route::get('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'show']);
+    Route::get('/menu/{ID_Menu}/edit', [\App\Http\Controllers\MenuController::class, 'edit']);
+    Route::put('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'update']);
+    Route::delete('/menu/{ID_Menu}', [\App\Http\Controllers\MenuController::class, 'destroy']);
+});
 
-Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
+
+Route::resource('kategori', \App\Http\Controllers\KategoriController::class)->middleware('auth', 'admin');
 
 Auth::routes();
 

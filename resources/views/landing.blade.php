@@ -45,7 +45,8 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#features">Service</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#faq">Feedback</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Feedback</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="/register">Register</a></li>
           <li><a class="getstarted scrollto" href="/login">Login</a></li>
