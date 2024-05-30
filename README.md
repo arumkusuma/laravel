@@ -6,7 +6,7 @@ Welcome to **CafeOurs**, your cozy corner on the web where coffee lovers unite! 
 
 - **Home Page**: A brief introduction to our café.
 - **Menu**: Basic descriptions of our beverages and snacks.
-- **About Us**: Our story and mission.
+- **Customer Login**: A login system for customers to access their accounts.
 
 ### Technologies Used
 
@@ -18,19 +18,19 @@ Welcome to **CafeOurs**, your cozy corner on the web where coffee lovers unite! 
 
 1. **Clone the repository**: 
    ```bash
-   git clone https://github.com/yourusername/CafeOurs.git
+   git clone https://github.com/arumkusuma/laravel.git
    ```
 2. **Navigate to the project directory**: 
    ```bash
-   cd CafeOurs
+   cd laravel
    ```
 3. **Set up Laragon**:
    - Download and install Laragon from [here](https://laragon.org/download/).
-   - Start Laragon and ensure that Apache and MySQL services are running.
+   - Start Laragon and ensure that Laragon services are running.
 
 4. **Set up the project in Laragon**:
    - Place the `CafeOurs` directory inside Laragon's `www` directory.
-   - Open Laragon and navigate to `Menu > www > CafeOurs`.
+   - Open Laragon and navigate to `Menu > www > laravel`.
 
 5. **Install the dependencies**:
    ```bash
